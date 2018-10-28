@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juego</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>
+<div id="contenedor">
+    <h1>CONTACTO</h1>
+    <h3>Palabra clave:</h3>
+
+    <div id="zonaJuego" style="visibility: hidden;">
+        <div id="palabra"></div>
+        <form action="#">
+            <input type="text" placeholder="Introduce una palabra" size="15">
+        </form> 
+        <button type="button" id="contacto" class="boton peque">Contacto!</button>
+    </div>
+
+    <button type="button" id="inicioJuego" class="boton">Jugar</button>
+    
+    <!-- Ventana modal -->
+    <div id="ex1" class="modal">
+            <h3>Instrucciones</h3>
+            <p>Contacto! es un juego originariamente destinado para un mínimo de tres jugadores.
+            Uno de ellos (el Máster) escoge una palabra, de la cual tendrá que dar su inical para que
+            los otros jugadores la adivinen. En nuestro juego, la IA será el Máster.
+            </p>
+            <p>La manera de jugar es la siguiente: 
+                Un jugador piensa una palabra que empiece por la letra que propone el Máster. Si fuera un C, 
+                podría pensar en "Casa". Ahora se trata de hacer que alguno de los otros jugadores diga esa palabra 
+                que tienes en mente relacionándola con otra que sí dices en voz alta. Por ejemplo, "Hogar". Si uno de los
+                participantes cree saber la palabra que tienes en mente, ha de decir "¡Contacto!" y contar hasta tres.
+                Entonces ambos jugadores han de decir la palabra al unísono. Si coincide, el Máster cederá otra letra, por ejemplo CA.
+                Ahora se trataría de pensar una palabra que empiece por CA, como "Caballo", y proceder de la misma manera que antes.
+            </p>
+          </div>
+          
+          <p><a href="#ex1" rel="modal:open" class="info"><i class="fas fa-info-circle"></i></a></p>
+    </div>
+    <div id="palabraOculta" style="display: none;"></div>
+    <div id="aciertos" style="display: none;"></div>
+</div>
+</body>
+<script src="../js/palabras.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+</html>
